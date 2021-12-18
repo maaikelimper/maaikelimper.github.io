@@ -1,8 +1,6 @@
 import requests
 import json
 
-projectcache = []
-
 def fetch_data(url):
     username = 'mlimper'
     token = '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'
@@ -13,11 +11,6 @@ def fetch_data(url):
         return []
     else:
         return res.json()
-
-
-nrepo = 0
-repo_teams = {}
-my_repo_list = []
 
 team_repos = {}
 
@@ -43,8 +36,8 @@ repo_list = []
 for npage in range(1,3):
     repos_url = 'https://api.github.com/orgs/wmo-im/repos?public=true&sort=name&page='+str(npage)
     print(repos_url)
-    repos_results = fetch_data(url=repos_url)
-    print(len(repos_results))
+    repo_results = fetch_data(url=repos_url)
+    print(len(repo_results))
     for repo in repo_results:
         teams=[]
         for team in team_repos:
@@ -58,8 +51,12 @@ for npage in range(1,3):
                 "teams" : teams
             })
 
-# write result to wis_repo_data.json
+# write new repos/repos.md
 
-with open("wis_repo_data.json","w") as myfile:
-    json.dump(repo_list,myfile)
-
+with open("repos/repos.md","w") as myfile:
+    for repo in repo_list:
+        myfile.write(f'#{repo["name"]}\n')
+        myfile.write(f'{str(repo["description"])}\n')
+        myfile.write(f'Github repo: [{repo["name"]}]({repo["html_url"]})\n')
+        if len(teams) > 0:
+            myfile.write(f'Teams: {", ".join(repo["teams"])}\n')
