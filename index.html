@@ -1,1 +1,119 @@
-Hello World
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="WMO Information Management | Pages for Repositories and Teams in WMO-IM" />
+  <meta name="author" content="humans.txt" />
+  <meta name="msapplication-TileColor" content="#00a300" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>WMO @ github</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous" />
+  <style>
+  .jumbotron {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+
+  .jumbotron-heading {
+    font-weight: 300;
+  }
+
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+
+  #main {
+    padding-top: 56px;
+  }
+
+  .close-card {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    z-index: 1;
+  }
+
+  .tile a {
+    color: black;
+  }
+
+  #footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  #footer p {
+    margin-bottom: .25rem;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="collapse bg-light fixed-top" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-dark">About</h4>
+          <p class="text-muted">
+            Pages for Repositories and Teams in WMO Information Management</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar fixed-top navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <strong></strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">WMO-IM GitHub</h1>
+        <p class="lead text-muted">WMO-IM github is a working space for <a href="https://public.wmo.int/en">WMO</a> experts to maintain and improve upon the WMO Information System (WIS).</br>
+            Visit the <a href="https://community.wmo.int/activity-areas/wmo-information-system-wis">WMO Community Site</a> for official descriptions and to access published resources.<br />
+            If you are a member of an Expert or Task Team, visit the <a href="https://github.com/wmo-im/wmo-im.github.io/wiki">wmo-im wiki</a> for guidance and workflows.<br />
+        </p>
+      </div>
+    </section>
+
+    <section class="jumbotron text-center">
+        <div class="container" id="wis_repo_dump">
+          <h1 class="jumbotron-heading">WMO-IM Github repositories</h1>
+        </div>
+    </section>
+
+  </div>
+
+  <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(function () {
+      $.getJSON('wis_repo_data.json',function (repo_data) {
+          repo_data.forEach(function(repo){
+            // create new div and add to wis_repo_dump
+            div = $("<div>").html("<h3>"+repo[name]+"</h3><p>teams:"+repo["teams"]+"<br/>"+repo["description"]+"</p>");
+            div.appendTo('#wis_repo_dump');
+          });
+        });
+      }
+  </script>
+
+  </body>
+  </html>
