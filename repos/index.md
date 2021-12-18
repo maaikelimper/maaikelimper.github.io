@@ -13,7 +13,7 @@ Common Code Tables
 Github repo: [CCT](https://github.com/wmo-im/CCT)
  
 ## CF-NetCDF
-None
+ description missing 
 Github repo: [CF-NetCDF](https://github.com/wmo-im/CF-NetCDF)
  
 ## climate
@@ -25,11 +25,11 @@ Feature Collection Model is used to represent a collection of GML feature instan
 Github repo: [collect](https://github.com/wmo-im/collect)
  
 ## csv2bufr
-None
+ description missing 
 Github repo: [csv2bufr](https://github.com/wmo-im/csv2bufr)
  
 ## docs
-None
+ description missing 
 Github repo: [docs](https://github.com/wmo-im/docs)
  
 ## GRIB2
@@ -73,7 +73,7 @@ METCE provides a set of foundation building blocks that can be built into an app
 Github repo: [metce](https://github.com/wmo-im/metce)
  
 ## monitoring
-None
+ description missing 
 Github repo: [monitoring](https://github.com/wmo-im/monitoring)
  
 ## opm
@@ -81,7 +81,7 @@ Observable Property Model provides a framework for qualifying or constraining ph
 Github repo: [opm](https://github.com/wmo-im/opm)
  
 ## ops
-None
+ description missing 
 Github repo: [ops](https://github.com/wmo-im/ops)
  
 ## pywcmp
@@ -93,7 +93,7 @@ pywiscat provides a Pythonic API atop the WMO WIS Catalogue in support of report
 Github repo: [pywiscat](https://github.com/wmo-im/pywiscat)
  
 ## pywmdr
-None
+ description missing 
 Github repo: [pywmdr](https://github.com/wmo-im/pywmdr)
  
 ## saf
@@ -101,7 +101,7 @@ Simple Aeronautical Features - an XML schema for aeronautical information consis
 Github repo: [saf](https://github.com/wmo-im/saf)
  
 ## VolumeC1
-None
+ description missing 
 Github repo: [VolumeC1](https://github.com/wmo-im/VolumeC1)
  
 ## wcmp
@@ -117,7 +117,7 @@ WMO Core Metadata Profile 2
 Github repo: [wcmp2](https://github.com/wmo-im/wcmp2)
  
 ## wikimedia-pilot
-None
+ description missing 
 Github repo: [wikimedia-pilot](https://github.com/wmo-im/wikimedia-pilot)
  
 ## WIS
@@ -125,7 +125,7 @@ WMO Information System
 Github repo: [WIS](https://github.com/wmo-im/WIS)
  
 ## WIS2
-None
+ description missing 
 Github repo: [WIS2](https://github.com/wmo-im/WIS2)
  
 ## wis2-metadata-search
