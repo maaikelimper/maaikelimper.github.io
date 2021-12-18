@@ -4,8 +4,8 @@ import json
 projectcache = []
 
 def fetch_data(url):
-    username = 'mlimper'
-    token = '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'
+    username = $user_name
+    token = $personal_access_token
     #res = requests.get(url,auth=(username,token))
     res = requests.get(url)
     print(res.status_code)
