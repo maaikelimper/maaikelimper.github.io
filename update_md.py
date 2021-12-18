@@ -57,7 +57,7 @@ with open("repos/index.md","w") as myfile:
     myfile.write(f'# All public WMO-IM GitHub repositories: \n')
     myfile.write(f' \n')
     for repo in repo_list:
-        myfile.write(f'##{repo["name"]}\n')
+        myfile.write(f'## {repo["name"]}\n')
         myfile.write(f'{str(repo["description"])}\n')
         myfile.write(f'Github repo: [{repo["name"]}]({repo["html_url"]})\n')
         if len(teams) > 0:
