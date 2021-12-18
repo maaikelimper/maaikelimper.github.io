@@ -60,8 +60,7 @@ with open("repos/index.md","w") as myfile:
         myfile.write(f'## {repo["name"]}\n')
         if repo["description"] :
             myfile.write(f'{repo["description"]}\n')
-        else :
-            myfile.write(f' description missing \n')
+            myfile.write(f' \n')
         myfile.write(f'Github repo: [{repo["name"]}]({repo["html_url"]})\n')
         if len(teams) > 0:
             myfile.write(f'Teams: {", ".join(repo["teams"])}\n')
