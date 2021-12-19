@@ -40,11 +40,8 @@ Expert Team on Data Standards
  
 This team has the following sub-teams:
 - TT-AvData: Task Team on Aviation Data 
- 
 - TT-CFNetCDF: Task Team for CF/NetCDF
- 
 - TT-TDCF: Task Team for Table Driven Code Formats formed in 2020. 
- 
 ## ET-DRC
  
 Expert Team on Data Requirements for Climate Services
@@ -63,18 +60,14 @@ This team works on the following repositories:
  
 This team has the following sub-teams:
 - TT-WIGOSMD: Task Team on WIGOS Metadata formed in 2020.
- 
 - TT-WISMD: Task Team on WIS Metadata
- 
 ## ET-OM
  
 Expert Team on Operations and Monitoring
  
 This team has the following sub-teams:
 - TT-GISC: 
- 
 - TT-WSI: Task Team on WIGOS Station Identifiers
- 
 ## ET-WIS2
  
 
@@ -85,9 +78,7 @@ This "parent team" is for organizing all previous inactive teams.
  
 This team has the following sub-teams:
 - TDCF: Do not use this previous team for Table Driven Code Forms. 
- 
 - TT-WMD: Do not use this previous Task Team on WIGOS Metadata
- 
 ## Manuals
  
 

@@ -7,5 +7,3 @@ If you are a member of an Expert or Task Team, visit the [wmo-im wiki](https://g
 [Meetings](/meetings)
 
 [Teams](/teams)
-
-[Repos](/repos)

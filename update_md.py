@@ -94,7 +94,6 @@ with open("teams/index.md","w") as myfile:
                     myfile.write(f'{child["description"]}\n')
                 else: 
                     myfile.write(f'Missing team description\n')
-                myfile.write(f' \n')
                 #if len(team["repo_list"]) != 0: 
                 #    myfile.write(f'This team works on the following repositories: \n')
                 #    for repo in team["repo_list"]:
