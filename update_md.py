@@ -1,36 +1,80 @@
 import requests
 import json
 
+from dotenv import load_dotenv
+load_dotenv()
+import os
+
+username = os.environ.get("username")
+token = os.environ.get("personal-access-token")
+
 def fetch_data(url):
-    username = 'mlimper'
-    token = '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'
-    #res = requests.get(url,auth=(username,token))
-    res = requests.get(url)
-    print(res.status_code)
+
+    res = requests.get(url,auth=(username,token))
+    #res = requests.get(url)
     if res.status_code != 200:
         return []
     else:
         return res.json()
 
+team_list = []
+team_children = {}
 team_repos = {}
 
+org_name = "wmo-im"
 for npage in range(1,3):
-    teams_url = 'https://api.github.com/orgs/wmo-im/teams?sort=name&page='+str(npage)
+    teams_url = f'https://api.github.com/orgs/{org_name}/teams?sort=name&page={str(npage)}'
     print(teams_url)
     team_results = fetch_data(url=teams_url)
     print(len(team_results))
     for team in team_results:
         repo_list = []
+        member_list = []
+        team_parent = None
+        team_obj = { 
+            "name": team["name"] , 
+            "description": team["description"], 
+            "members_url": f'https://api.github.com/orgs/{org_name}/teams/{team["slug"]}/members'
+        }
+        if team["parent"]:
+            team_parent = {}
+            team_parent["name"] = team["parent"]["name"]
+            team_parent["description"] = team["parent"]["name"]
+            if team_parent["name"] in team_children:
+                team_children[team_parent["name"]].append( team_obj )
+            else:
+                team_children[team_parent["name"]] = [ team_obj ]
         if "repositories_url" in team:
             repo_results = fetch_data(url=team["repositories_url"])
             for repo in repo_results:
-                repo_list.append(repo["name"])
-                if repo["name"] not in repo_teams:
-                    repo_teams[repo["name"]] = [team["name"]]
-                    nrepo += 1
-                else:
-                    repo_teams[repo["name"]].append(team["name"])
+                repo_list.append({repo["name"],repo["description"],repo["html_url"]})
+        team_obj["repo_list"] = repo_list
+        team_obj["parent"] = team_parent
+        team_list.append(team_obj)
         team_repos[team["name"]] = repo_list
+
+# write new repos/repos.md
+with open("teams/index.md","w") as myfile:
+    myfile.write(f'# WMO-IM Github Teams\n')
+    myfile.write(f' \n')
+    for team in team_list:
+        myfile.write(f'## {team["name"]}\n')
+        myfile.write(f' \n')
+        if "description" in team:
+            myfile.write(f'{team["description"]}\n')
+            myfile.write(f' \n')
+        if team["name"] in team_children:
+            for child in team_children[team["name"]]:
+                myfile.write(f'### {child["name"]}\n')
+                myfile.write(f' \n')
+                if "description" in child:
+                    myfile.write(f'{child["description"]}\n')
+                    myfile.write(f' \n')
+                myfile.write(f'repos \n')
+                myfile.write(f' \n')
+        elif team["parent"] == None:
+            myfile.write(f'repos \n')
+            myfile.write(f' \n')
 
 repo_list = []
 for npage in range(1,3):
@@ -61,7 +105,6 @@ with open("repos/index.md","w") as myfile:
         if repo["description"] :
             myfile.write(f'{repo["description"]}\n')
             myfile.write(f' \n')
-        myfile.write(f'Github repo: [{repo["name"]}]({repo["html_url"]})\n')
-        if len(teams) > 0:
-            myfile.write(f'Teams: {", ".join(repo["teams"])}\n')
+        myfile.write(f'[Go to repository]({repo["html_url"]})\n')
         myfile.write(f' \n')
+
