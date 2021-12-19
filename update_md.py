@@ -47,7 +47,11 @@ for npage in range(1,3):
         if "repositories_url" in team:
             repo_results = fetch_data(url=team["repositories_url"])
             for repo in repo_results:
-                repo_list.append({repo["name"],repo["description"],repo["html_url"]})
+                repo_list.append({ 
+                    "name": repo["name"],
+                    "description": repo["description"],
+                    "html_url": repo["html_url"]
+                    })
         team_obj["repo_list"] = repo_list
         team_obj["parent"] = team_parent
         team_list.append(team_obj)
@@ -59,10 +63,13 @@ with open("teams/index.md","w") as myfile:
     myfile.write(f' \n')
     # first run over all teams and create links for all teams without parents
     for team in team_list:
+        team_title = str(team["name"]).replace(" ","-")
         if team["parent"] == None:
-            myfile.write(f'[{team["name"]}](#{team["name"]}) \n')
+            myfile.write(f'[{team_title}](#{team_title}) \n')
+            myfile.write(f' \n')
     for team in team_list:
-        myfile.write(f'## {team["name"]}\n')
+        team_title = str(team["name"]).replace(" ","-")
+        myfile.write(f'## {team_title}\n')
         myfile.write(f' \n')
         if "description" in team:
             myfile.write(f'{team["description"]}\n')
@@ -74,41 +81,32 @@ with open("teams/index.md","w") as myfile:
                 if "description" in child:
                     myfile.write(f'{child["description"]}\n')
                     myfile.write(f' \n')
-                myfile.write(f'repos \n')
-                myfile.write(f' \n')
+                if len(team["repo_list"]) == 0:
+                    myfile.write(f'This team has no Github repositories\n')
+                    myfile.write(f' \n')
+                else: 
+                    myfile.write(f'This team works on the following repositories: \n')
+                    for repo in team["repo_list"]:
+                        myfile.write(f'- [{repo["name"]}]({repo["html_url"]}): ')
+                        if repo["description"] :
+                            myfile.write(f'{repo["description"]}\n')
+                        else: 
+                            myfile.write(f'Missing description\n')
+                    myfile.write(f' \n')
         elif team["parent"] == None:
-            myfile.write(f'repos \n')
             myfile.write(f' \n')
+            if len(team["repo_list"]) == 0:
+                myfile.write(f'This team is not associated to any Github repositories\n')
+                myfile.write(f' \n')
+            else: 
+                myfile.write(f'This team works on the following repositories: \n')
+                for repo in team["repo_list"]:
+                    myfile.write(f'- [{repo["name"]}]({repo["html_url"]}): ')
+                    if repo["description"] :
+                        myfile.write(f'{repo["description"]}\n')
+                    else: 
+                        myfile.write(f'Missing description\n')
+                myfile.write(f' \n')
 
-repo_list = []
-for npage in range(1,3):
-    repos_url = 'https://api.github.com/orgs/wmo-im/repos?public=true&sort=name&page='+str(npage)
-    print(repos_url)
-    repo_results = fetch_data(url=repos_url)
-    print(len(repo_results))
-    for repo in repo_results:
-        teams=[]
-        for team in team_repos:
-            if repo["name"] in team_repos[team]:
-                is_team_repo=True
-                teams.append(repo["name"])
-        repo_list.append({
-                "name" : repo["name"],
-                "description" : repo["description"],
-                "html_url" : repo["html_url"],
-                "teams" : teams
-            })
 
-# write new repos/repos.md
-
-with open("repos/index.md","w") as myfile:
-    myfile.write(f'# All public WMO-IM GitHub repositories: \n')
-    myfile.write(f' \n')
-    for repo in repo_list:
-        myfile.write(f'## {repo["name"]}\n')
-        if repo["description"] :
-            myfile.write(f'{repo["description"]}\n')
-            myfile.write(f' \n')
-        myfile.write(f'[Go to repository]({repo["html_url"]})\n')
-        myfile.write(f' \n')
 
