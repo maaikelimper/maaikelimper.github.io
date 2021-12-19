@@ -9,10 +9,10 @@ username = os.environ.get("username")
 token = os.environ.get("personal-access-token")
 
 def fetch_data(url):
-
     res = requests.get(url,auth=(username,token))
     #res = requests.get(url)
     if res.status_code != 200:
+        print(res.status_code)
         return []
     else:
         return res.json()
@@ -57,6 +57,10 @@ for npage in range(1,3):
 with open("teams/index.md","w") as myfile:
     myfile.write(f'# WMO-IM Github Teams\n')
     myfile.write(f' \n')
+    # first run over all teams and create links for all teams without parents
+    for team in team_list:
+        if team["parent"] == None:
+            myfile.write(f'[{team["name"]}](#{team["name"]}) \n')
     for team in team_list:
         myfile.write(f'## {team["name"]}\n')
         myfile.write(f' \n')
