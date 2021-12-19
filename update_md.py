@@ -80,16 +80,16 @@ with open("teams/index.md","w") as myfile:
             myfile.write(f'Missing team description\n')
         myfile.write(f' \n')
         if len(team["repo_list"]) != 0: 
-            myfile.write(f'GitHub repositories: \n')
+            myfile.write(f'#### GitHub repositories: \n')
             for repo in team["repo_list"]:
-                myfile.write(f'- [{repo["name"]}]({repo["html_url"]}): ')
+                myfile.write(f'* [{repo["name"]}]({repo["html_url"]}): ')
                 if repo["description"] :
                     myfile.write(f'{repo["description"]}\n')
                 else: 
                     myfile.write(f'Missing description\n')
             myfile.write(f' \n')
         if team["name"] in team_children:
-            myfile.write(f'#### Sub-teams\n')
+            myfile.write(f'#### Sub-teams:\n')
             for child in team_children[team["name"]]:
                 myfile.write(f'* [{child["name"]}]({child["html_url"]}): ')
                 if "description" in child:
