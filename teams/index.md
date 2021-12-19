@@ -34,33 +34,24 @@
  
 Expert Team on Audit and Certification
  
- 
 ## ET-Data
  
 Expert Team on Data Standards
  
+This team has the following sub-teams:
+- TT-AvData: Task Team on Aviation Data 
  
-### TT-AvData
+- TT-CFNetCDF: Task Team for CF/NetCDF
  
-Task Team on Aviation Data 
- 
-### TT-CFNetCDF
- 
-Task Team for CF/NetCDF
- 
-### TT-TDCF
- 
-Task Team for Table Driven Code Formats formed in 2020. 
+- TT-TDCF: Task Team for Table Driven Code Formats formed in 2020. 
  
 ## ET-DRC
  
 Expert Team on Data Requirements for Climate Services
  
- 
 ## ET-IM
  
 Expert Team on Information Management
- 
  
 ## ET-Metadata
  
@@ -70,45 +61,32 @@ This team works on the following repositories:
 - [wmds](https://github.com/wmo-im/wmds): WIGOS Metadata Standard: Semantic standard and code tables
 - [wcmp](https://github.com/wmo-im/wcmp): WMO Core Metadata Profile
  
+This team has the following sub-teams:
+- TT-WIGOSMD: Task Team on WIGOS Metadata formed in 2020.
  
-### TT-WIGOSMD
- 
-Task Team on WIGOS Metadata formed in 2020.
- 
-### TT-WISMD
- 
-Task Team on WIS Metadata
+- TT-WISMD: Task Team on WIS Metadata
  
 ## ET-OM
  
 Expert Team on Operations and Monitoring
  
+This team has the following sub-teams:
+- TT-GISC: 
  
-### TT-GISC
- 
-
- 
-### TT-WSI
- 
-Task Team on WIGOS Station Identifiers
+- TT-WSI: Task Team on WIGOS Station Identifiers
  
 ## ET-WIS2
  
 
  
- 
 ## LegacyTeams
  
 This "parent team" is for organizing all previous inactive teams. 
  
+This team has the following sub-teams:
+- TDCF: Do not use this previous team for Table Driven Code Forms. 
  
-### TDCF
- 
-Do not use this previous team for Table Driven Code Forms. 
- 
-### TT-WMD
- 
-Do not use this previous Task Team on WIGOS Metadata
+- TT-WMD: Do not use this previous Task Team on WIGOS Metadata
  
 ## Manuals
  
@@ -117,7 +95,6 @@ Do not use this previous Task Team on WIGOS Metadata
 This team works on the following repositories: 
 - [manuals](https://github.com/wmo-im/manuals): WMO Manuals
  
- 
 ## pywmcp-team
  
 pywmcp-team
@@ -125,11 +102,9 @@ pywmcp-team
 This team works on the following repositories: 
 - [pywcmp](https://github.com/wmo-im/pywcmp): pywcmp provides validation and quality assessment capabilities for the WMO WIS Core Metadata Profile (WCMP)
  
- 
 ## TDCF
  
 Do not use this previous team for Table Driven Code Forms. 
- 
  
 ## TT-AvData
  
@@ -144,7 +119,6 @@ This team works on the following repositories:
 - [iwxxm-modelling](https://github.com/wmo-im/iwxxm-modelling): Tools and resources for the development of IWXXM in UML and preparation of XML/GML application schemas and schematron rules
 - [iwxxm-codelists](https://github.com/wmo-im/iwxxm-codelists): Code list management for WMO published content
  
- 
 ## TT-CFNetCDF
  
 Task Team for CF/NetCDF
@@ -155,11 +129,9 @@ This team works on the following repositories:
 - [CCT](https://github.com/wmo-im/CCT): Common Code Tables
 - [CF-NetCDF](https://github.com/wmo-im/CF-NetCDF): Missing description
  
- 
 ## TT-GISC
  
 
- 
  
 ## TT-Protocols
  
@@ -167,7 +139,6 @@ WMO Task Team on Protocols
  
 This team works on the following repositories: 
 - [GTStoWIS2](https://github.com/wmo-im/GTStoWIS2): Conversion of GTS headers to WIS2 topic
- 
  
 ## TT-TDCF
  
@@ -177,7 +148,6 @@ This team works on the following repositories:
 - [GRIB2](https://github.com/wmo-im/GRIB2): GRIB2
 - [BUFR4](https://github.com/wmo-im/BUFR4): BUFR edition 4
 - [CCT](https://github.com/wmo-im/CCT): Common Code Tables
- 
  
 ## TT-WIGOSMD
  
@@ -190,7 +160,6 @@ This team works on the following repositories:
 - [pywmdr](https://github.com/wmo-im/pywmdr): Missing description
 - [wikimedia-pilot](https://github.com/wmo-im/wikimedia-pilot): Missing description
  
- 
 ## TT-WIGOSMetadata-Collaborators
  
 
@@ -198,14 +167,12 @@ This team works on the following repositories:
 This team works on the following repositories: 
 - [wmds](https://github.com/wmo-im/wmds): WIGOS Metadata Standard: Semantic standard and code tables
  
- 
 ## TT-WIS-Monitoring
  
 
  
 This team works on the following repositories: 
 - [monitoring](https://github.com/wmo-im/monitoring): Missing description
- 
  
 ## TT-WISMD
  
@@ -222,11 +189,9 @@ This team works on the following repositories:
 - [wcmp2](https://github.com/wmo-im/wcmp2): WMO Core Metadata Profile 2
 - [wcmp2-codelists](https://github.com/wmo-im/wcmp2-codelists): Code lists for WMO Core Metadata Profile 2.*
  
- 
 ## TT-WMD
  
 Do not use this previous Task Team on WIGOS Metadata
- 
  
 ## TT-WSI
  
@@ -235,14 +200,12 @@ Task Team on WIGOS Station Identifiers
 This team works on the following repositories: 
 - [WSI](https://github.com/wmo-im/WSI): WIGOS Station Identifier
  
- 
 ## WIS2
  
 
  
 This team works on the following repositories: 
 - [GTStoWIS2](https://github.com/wmo-im/GTStoWIS2): Conversion of GTS headers to WIS2 topic
- 
  
 ## WIS2node
  
@@ -253,5 +216,4 @@ This team works on the following repositories:
 - [eccodes](https://github.com/wmo-im/eccodes): A docker image to work with eccodes to work with BUFR
 - [wis2node-ui](https://github.com/wmo-im/wis2node-ui): WIS 2.0 in a box user interface
 - [wis2node-api](https://github.com/wmo-im/wis2node-api): WIS 2 node API
- 
  
