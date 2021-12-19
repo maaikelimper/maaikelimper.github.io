@@ -67,40 +67,46 @@ with open("teams/index.md","w") as myfile:
         if team["parent"] == None:
             myfile.write(f'[{team_title}](#{team_title}) \n')
             myfile.write(f' \n')
+    # now run over team-list again and create paragraphs
     for team in team_list:
         team_title = str(team["name"]).replace(" ","-")
         myfile.write(f'## {team_title}\n')
         myfile.write(f' \n')
         if "description" in team:
             myfile.write(f'{team["description"]}\n')
+        else: 
+            myfile.write(f'Missing team description\n')
+        myfile.write(f' \n')
+        if len(team["repo_list"]) != 0: 
+            myfile.write(f'This team works on the following repositories: \n')
+            for repo in team["repo_list"]:
+                myfile.write(f'- [{repo["name"]}]({repo["html_url"]}): ')
+                if repo["description"] :
+                    myfile.write(f'{repo["description"]}\n')
+                else: 
+                    myfile.write(f'Missing description\n')
             myfile.write(f' \n')
+
+        myfile.write(f' \n')
         if team["name"] in team_children:
             for child in team_children[team["name"]]:
                 myfile.write(f'### {child["name"]}\n')
                 myfile.write(f' \n')
                 if "description" in child:
                     myfile.write(f'{child["description"]}\n')
-                    myfile.write(f' \n')
-                if len(team["repo_list"]) != 0: 
-                    myfile.write(f'This team works on the following repositories: \n')
-                    for repo in team["repo_list"]:
-                        myfile.write(f'- [{repo["name"]}]({repo["html_url"]}): ')
-                        if repo["description"] :
-                            myfile.write(f'{repo["description"]}\n')
-                        else: 
-                            myfile.write(f'Missing description\n')
-                    myfile.write(f' \n')
-        elif team["parent"] == None:
-            myfile.write(f' \n')
-            if len(team["repo_list"]) != 0: 
-                myfile.write(f'This team works on the following repositories: \n')
-                for repo in team["repo_list"]:
-                    myfile.write(f'- [{repo["name"]}]({repo["html_url"]}): ')
-                    if repo["description"] :
-                        myfile.write(f'{repo["description"]}\n')
-                    else: 
-                        myfile.write(f'Missing description\n')
+                else: 
+                    myfile.write(f'Missing team description\n')
                 myfile.write(f' \n')
+                #if len(team["repo_list"]) != 0: 
+                #    myfile.write(f'This team works on the following repositories: \n')
+                #    for repo in team["repo_list"]:
+                #        myfile.write(f'- [{repo["name"]}]({repo["html_url"]}): ')
+                #        if repo["description"] :
+                #            myfile.write(f'{repo["description"]}\n')
+                #        else: 
+                #            myfile.write(f'Missing description\n')
+                #    myfile.write(f' \n')
+
 
 
 
