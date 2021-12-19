@@ -89,9 +89,9 @@ with open("teams/index.md","w") as myfile:
                     myfile.write(f'Missing description\n')
             myfile.write(f' \n')
         if team["name"] in team_children:
-            myfile.write(f'Sub-teams:\n')
+            myfile.write(f'#### Sub-teams\n')
             for child in team_children[team["name"]]:
-                myfile.write(f'- {child["name"]}: ')
+                myfile.write(f'* [{child["name"]}]({child["html_url"]}): ')
                 if "description" in child:
                     myfile.write(f'{child["description"]}\n')
                 else: 
