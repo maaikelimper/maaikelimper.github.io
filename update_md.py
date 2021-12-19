@@ -60,7 +60,7 @@ for npage in range(1,3):
 
 # write new repos/repos.md
 with open("teams/index.md","w") as myfile:
-    myfile.write(f'# WMO-IM Github Teams\n')
+    myfile.write(f'# WMO-IM GitHub Teams\n')
     myfile.write(f' \n')
     # first run over all teams and create links for all teams without parents
     #for team in team_list:

@@ -1,4 +1,4 @@
-# WMO-IM Github Teams
+# WMO-IM GitHub Teams
  
 ## [ET-AC](https://github.com/orgs/wmo-im/teams/et-ac)
  
