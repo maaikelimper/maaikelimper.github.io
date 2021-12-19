@@ -35,8 +35,6 @@
 Expert Team on Audit and Certification
  
  
-This team is not associated to any Github repositories
- 
 ## ET-Data
  
 Expert Team on Data Standards
@@ -45,33 +43,23 @@ Expert Team on Data Standards
  
 Task Team on Aviation Data 
  
-This team has no Github repositories
- 
 ### TT-CFNetCDF
  
 Task Team for CF/NetCDF
  
-This team has no Github repositories
- 
 ### TT-TDCF
  
 Task Team for Table Driven Code Formats formed in 2020. 
- 
-This team has no Github repositories
  
 ## ET-DRC
  
 Expert Team on Data Requirements for Climate Services
  
  
-This team is not associated to any Github repositories
- 
 ## ET-IM
  
 Expert Team on Information Management
  
- 
-This team is not associated to any Github repositories
  
 ## ET-Metadata
  
@@ -101,20 +89,14 @@ Expert Team on Operations and Monitoring
  
 
  
-This team has no Github repositories
- 
 ### TT-WSI
  
 Task Team on WIGOS Station Identifiers
- 
-This team has no Github repositories
  
 ## ET-WIS2
  
 
  
- 
-This team is not associated to any Github repositories
  
 ## LegacyTeams
  
@@ -124,13 +106,9 @@ This "parent team" is for organizing all previous inactive teams.
  
 Do not use this previous team for Table Driven Code Forms. 
  
-This team has no Github repositories
- 
 ### TT-WMD
  
 Do not use this previous Task Team on WIGOS Metadata
- 
-This team has no Github repositories
  
 ## Manuals
  

@@ -81,10 +81,7 @@ with open("teams/index.md","w") as myfile:
                 if "description" in child:
                     myfile.write(f'{child["description"]}\n')
                     myfile.write(f' \n')
-                if len(team["repo_list"]) == 0:
-                    myfile.write(f'This team has no Github repositories\n')
-                    myfile.write(f' \n')
-                else: 
+                if len(team["repo_list"]) != 0: 
                     myfile.write(f'This team works on the following repositories: \n')
                     for repo in team["repo_list"]:
                         myfile.write(f'- [{repo["name"]}]({repo["html_url"]}): ')
@@ -95,10 +92,7 @@ with open("teams/index.md","w") as myfile:
                     myfile.write(f' \n')
         elif team["parent"] == None:
             myfile.write(f' \n')
-            if len(team["repo_list"]) == 0:
-                myfile.write(f'This team is not associated to any Github repositories\n')
-                myfile.write(f' \n')
-            else: 
+            if len(team["repo_list"]) != 0: 
                 myfile.write(f'This team works on the following repositories: \n')
                 for repo in team["repo_list"]:
                     myfile.write(f'- [{repo["name"]}]({repo["html_url"]}): ')
