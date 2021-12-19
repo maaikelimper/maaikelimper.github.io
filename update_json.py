@@ -6,9 +6,10 @@ projectcache = []
 def fetch_data(url):
     username = $user_name
     token = $personal_access_token
-    #res = requests.get(url,auth=(username,token))
-    res = requests.get(url)
-    print(res.status_code)
+
+    res = requests.get(url,auth=(username,token))
+    #print(res.status_code)
+
     if res.status_code != 200:
         return []
     else:
