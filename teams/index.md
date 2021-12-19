@@ -30,14 +30,14 @@
  
 [WIS2node](#WIS2node) 
  
-## WIS2node
+## ET-AC
  
 Expert Team on Audit and Certification
  
  
 This team is not associated to any Github repositories
  
-## WIS2node
+## ET-Data
  
 Expert Team on Data Standards
  
@@ -45,35 +45,35 @@ Expert Team on Data Standards
  
 Task Team on Aviation Data 
  
-This team is not associated to any Github repositories
+This team has no Github repositories
  
 ### TT-CFNetCDF
  
 Task Team for CF/NetCDF
  
-This team is not associated to any Github repositories
+This team has no Github repositories
  
 ### TT-TDCF
  
 Task Team for Table Driven Code Formats formed in 2020. 
  
-This team is not associated to any Github repositories
+This team has no Github repositories
  
-## WIS2node
+## ET-DRC
  
 Expert Team on Data Requirements for Climate Services
  
  
 This team is not associated to any Github repositories
  
-## WIS2node
+## ET-IM
  
 Expert Team on Information Management
  
  
 This team is not associated to any Github repositories
  
-## WIS2node
+## ET-Metadata
  
 Expert Team on Metadata
  
@@ -84,6 +84,7 @@ Task Team on WIGOS Metadata formed in 2020.
 This team works on the following repositories: 
 - [wmds](https://github.com/wmo-im/wmds): WIGOS Metadata Standard: Semantic standard and code tables
 - [wcmp](https://github.com/wmo-im/wcmp): WMO Core Metadata Profile
+ 
 ### TT-WISMD
  
 Task Team on WIS Metadata
@@ -91,7 +92,8 @@ Task Team on WIS Metadata
 This team works on the following repositories: 
 - [wmds](https://github.com/wmo-im/wmds): WIGOS Metadata Standard: Semantic standard and code tables
 - [wcmp](https://github.com/wmo-im/wcmp): WMO Core Metadata Profile
-## WIS2node
+ 
+## ET-OM
  
 Expert Team on Operations and Monitoring
  
@@ -99,22 +101,22 @@ Expert Team on Operations and Monitoring
  
 
  
-This team is not associated to any Github repositories
+This team has no Github repositories
  
 ### TT-WSI
  
 Task Team on WIGOS Station Identifiers
  
-This team is not associated to any Github repositories
+This team has no Github repositories
  
-## WIS2node
+## ET-WIS2
  
 
  
  
 This team is not associated to any Github repositories
  
-## WIS2node
+## LegacyTeams
  
 This "parent team" is for organizing all previous inactive teams. 
  
@@ -122,91 +124,98 @@ This "parent team" is for organizing all previous inactive teams.
  
 Do not use this previous team for Table Driven Code Forms. 
  
-This team is not associated to any Github repositories
+This team has no Github repositories
  
 ### TT-WMD
  
 Do not use this previous Task Team on WIGOS Metadata
  
-This team is not associated to any Github repositories
+This team has no Github repositories
  
-## WIS2node
+## Manuals
  
 
  
  
 This team works on the following repositories: 
 - [manuals](https://github.com/wmo-im/manuals): WMO Manuals
-## WIS2node
+ 
+## pywmcp-team
  
 pywmcp-team
  
  
 This team works on the following repositories: 
 - [pywcmp](https://github.com/wmo-im/pywcmp): pywcmp provides validation and quality assessment capabilities for the WMO WIS Core Metadata Profile (WCMP)
-## WIS2node
+ 
+## TDCF
  
 Do not use this previous team for Table Driven Code Forms. 
  
-## WIS2node
+## TT-AvData
  
 Task Team on Aviation Data 
  
-## WIS2node
+## TT-CFNetCDF
  
 Task Team for CF/NetCDF
  
-## WIS2node
+## TT-GISC
  
 
  
-## WIS2node
+## TT-Protocols
  
 WMO Task Team on Protocols
  
  
 This team works on the following repositories: 
 - [GTStoWIS2](https://github.com/wmo-im/GTStoWIS2): Conversion of GTS headers to WIS2 topic
-## WIS2node
+ 
+## TT-TDCF
  
 Task Team for Table Driven Code Formats formed in 2020. 
  
-## WIS2node
+## TT-WIGOSMD
  
 Task Team on WIGOS Metadata formed in 2020.
  
-## WIS2node
+## TT-WIGOSMetadata-Collaborators
  
 
  
  
 This team works on the following repositories: 
 - [wmds](https://github.com/wmo-im/wmds): WIGOS Metadata Standard: Semantic standard and code tables
-## WIS2node
+ 
+## TT-WIS-Monitoring
  
 
  
  
 This team works on the following repositories: 
-- [monitoring](https://github.com/wmo-im/monitoring): ## WIS2node
+- [monitoring](https://github.com/wmo-im/monitoring): Missing description
+ 
+## TT-WISMD
  
 Task Team on WIS Metadata
  
-## WIS2node
+## TT-WMD
  
 Do not use this previous Task Team on WIGOS Metadata
  
-## WIS2node
+## TT-WSI
  
 Task Team on WIGOS Station Identifiers
  
-## WIS2node
+## WIS2
  
 
  
  
 This team works on the following repositories: 
 - [GTStoWIS2](https://github.com/wmo-im/GTStoWIS2): Conversion of GTS headers to WIS2 topic
+ 
 ## WIS2node
  
 WIS 2 node
@@ -217,3 +226,4 @@ This team works on the following repositories:
 - [eccodes](https://github.com/wmo-im/eccodes): A docker image to work with eccodes to work with BUFR
 - [wis2node-ui](https://github.com/wmo-im/wis2node-ui): WIS 2.0 in a box user interface
 - [wis2node-api](https://github.com/wmo-im/wis2node-api): WIS 2 node API
+ 
