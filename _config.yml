@@ -1,5 +1,6 @@
 
 title: WMO Information Management
 logo: /images/wmoLogo2.png
-#description: This is a working space for WMO experts to maintain and improve upon the WMO Information System (WIS).
+description: Pages for Repositories and Teams in WMO Information Management
 theme: jekyll-theme-minimal
+github.is_user_page: false
