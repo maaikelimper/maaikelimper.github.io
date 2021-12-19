@@ -8,10 +8,10 @@ Expert Team on Audit and Certification
  
 Expert Team on Data Standards
  
-Sub-teams:
-- TT-AvData: Task Team on Aviation Data 
-- TT-CFNetCDF: Task Team for CF/NetCDF
-- TT-TDCF: Task Team for Table Driven Code Formats formed in 2020. 
+#### Sub-teams
+* [TT-AvData](https://github.com/orgs/wmo-im/teams/tt-avdata): Task Team on Aviation Data 
+* [TT-CFNetCDF](https://github.com/orgs/wmo-im/teams/tt-cfnetcdf): Task Team for CF/NetCDF
+* [TT-TDCF](https://github.com/orgs/wmo-im/teams/tt-tdcf): Task Team for Table Driven Code Formats formed in 2020. 
  
 ## [ET-DRC](https://github.com/orgs/wmo-im/teams/et-drc)
  
@@ -29,17 +29,17 @@ GitHub repositories:
 - [wmds](https://github.com/wmo-im/wmds): WIGOS Metadata Standard: Semantic standard and code tables
 - [wcmp](https://github.com/wmo-im/wcmp): WMO Core Metadata Profile
  
-Sub-teams:
-- TT-WIGOSMD: Task Team on WIGOS Metadata formed in 2020.
-- TT-WISMD: Task Team on WIS Metadata
+#### Sub-teams
+* [TT-WIGOSMD](https://github.com/orgs/wmo-im/teams/tt-wigosmd): Task Team on WIGOS Metadata formed in 2020.
+* [TT-WISMD](https://github.com/orgs/wmo-im/teams/tt-wismd): Task Team on WIS Metadata
  
 ## [ET-OM](https://github.com/orgs/wmo-im/teams/et-om)
  
 Expert Team on Operations and Monitoring
  
-Sub-teams:
-- TT-GISC: 
-- TT-WSI: Task Team on WIGOS Station Identifiers
+#### Sub-teams
+* [TT-GISC](https://github.com/orgs/wmo-im/teams/tt-gisc): 
+* [TT-WSI](https://github.com/orgs/wmo-im/teams/tt-wsi): Task Team on WIGOS Station Identifiers
  
 ## [ET-WIS2](https://github.com/orgs/wmo-im/teams/et-wis2)
  
@@ -49,9 +49,9 @@ Missing team description
  
 This "parent team" is for organizing all previous inactive teams. 
  
-Sub-teams:
-- TDCF: Do not use this previous team for Table Driven Code Forms. 
-- TT-WMD: Do not use this previous Task Team on WIGOS Metadata
+#### Sub-teams
+* [TDCF](https://github.com/orgs/wmo-im/teams/tdcf): Do not use this previous team for Table Driven Code Forms. 
+* [TT-WMD](https://github.com/orgs/wmo-im/teams/tt-wmd): Do not use this previous Task Team on WIGOS Metadata
  
 ## [Manuals](https://github.com/orgs/wmo-im/teams/manuals)
  
